@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		614749C11AB4C0EC00CCECA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614749C01AB4C0EC00CCECA7 /* AppDelegate.swift */; };
+		614749C31AB4C0EC00CCECA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614749C21AB4C0EC00CCECA7 /* ViewController.swift */; };
+		614749C61AB4C0EC00CCECA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614749C41AB4C0EC00CCECA7 /* Main.storyboard */; };
+		614749C81AB4C0EC00CCECA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614749C71AB4C0EC00CCECA7 /* Images.xcassets */; };
+		614749CB1AB4C0EC00CCECA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614749C91AB4C0EC00CCECA7 /* LaunchScreen.xib */; };
+		614749D71AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614749D61AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		614749D11AB4C0EC00CCECA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 614749B31AB4C0EC00CCECA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 614749BA1AB4C0EC00CCECA7;
+			remoteInfo = ZWVDropDownAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		614749BB1AB4C0EC00CCECA7 /* ZWVDropDownAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWVDropDownAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		614749BF1AB4C0EC00CCECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		614749C01AB4C0EC00CCECA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		614749C21AB4C0EC00CCECA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		614749C51AB4C0EC00CCECA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		614749C71AB4C0EC00CCECA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		614749CA1AB4C0EC00CCECA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		614749D01AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWVDropDownAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		614749D51AB4C0EC00CCECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		614749D61AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWVDropDownAlertTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		614749B81AB4C0EC00CCECA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614749CD1AB4C0EC00CCECA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		614749B21AB4C0EC00CCECA7 = {
+			isa = PBXGroup;
+			children = (
+				614749BD1AB4C0EC00CCECA7 /* ZWVDropDownAlert */,
+				614749D31AB4C0EC00CCECA7 /* ZWVDropDownAlertTests */,
+				614749BC1AB4C0EC00CCECA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		614749BC1AB4C0EC00CCECA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				614749BB1AB4C0EC00CCECA7 /* ZWVDropDownAlert.app */,
+				614749D01AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		614749BD1AB4C0EC00CCECA7 /* ZWVDropDownAlert */ = {
+			isa = PBXGroup;
+			children = (
+				614749C01AB4C0EC00CCECA7 /* AppDelegate.swift */,
+				614749C21AB4C0EC00CCECA7 /* ViewController.swift */,
+				614749C41AB4C0EC00CCECA7 /* Main.storyboard */,
+				614749C71AB4C0EC00CCECA7 /* Images.xcassets */,
+				614749C91AB4C0EC00CCECA7 /* LaunchScreen.xib */,
+				614749BE1AB4C0EC00CCECA7 /* Supporting Files */,
+			);
+			path = ZWVDropDownAlert;
+			sourceTree = "<group>";
+		};
+		614749BE1AB4C0EC00CCECA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				614749BF1AB4C0EC00CCECA7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		614749D31AB4C0EC00CCECA7 /* ZWVDropDownAlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				614749D61AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift */,
+				614749D41AB4C0EC00CCECA7 /* Supporting Files */,
+			);
+			path = ZWVDropDownAlertTests;
+			sourceTree = "<group>";
+		};
+		614749D41AB4C0EC00CCECA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				614749D51AB4C0EC00CCECA7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		614749BA1AB4C0EC00CCECA7 /* ZWVDropDownAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 614749DA1AB4C0EC00CCECA7 /* Build configuration list for PBXNativeTarget "ZWVDropDownAlert" */;
+			buildPhases = (
+				614749B71AB4C0EC00CCECA7 /* Sources */,
+				614749B81AB4C0EC00CCECA7 /* Frameworks */,
+				614749B91AB4C0EC00CCECA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZWVDropDownAlert;
+			productName = ZWVDropDownAlert;
+			productReference = 614749BB1AB4C0EC00CCECA7 /* ZWVDropDownAlert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		614749CF1AB4C0EC00CCECA7 /* ZWVDropDownAlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 614749DD1AB4C0EC00CCECA7 /* Build configuration list for PBXNativeTarget "ZWVDropDownAlertTests" */;
+			buildPhases = (
+				614749CC1AB4C0EC00CCECA7 /* Sources */,
+				614749CD1AB4C0EC00CCECA7 /* Frameworks */,
+				614749CE1AB4C0EC00CCECA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				614749D21AB4C0EC00CCECA7 /* PBXTargetDependency */,
+			);
+			name = ZWVDropDownAlertTests;
+			productName = ZWVDropDownAlertTests;
+			productReference = 614749D01AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		614749B31AB4C0EC00CCECA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Ziewvater;
+				TargetAttributes = {
+					614749BA1AB4C0EC00CCECA7 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					614749CF1AB4C0EC00CCECA7 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 614749BA1AB4C0EC00CCECA7;
+					};
+				};
+			};
+			buildConfigurationList = 614749B61AB4C0EC00CCECA7 /* Build configuration list for PBXProject "ZWVDropDownAlert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 614749B21AB4C0EC00CCECA7;
+			productRefGroup = 614749BC1AB4C0EC00CCECA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				614749BA1AB4C0EC00CCECA7 /* ZWVDropDownAlert */,
+				614749CF1AB4C0EC00CCECA7 /* ZWVDropDownAlertTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		614749B91AB4C0EC00CCECA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				614749C61AB4C0EC00CCECA7 /* Main.storyboard in Resources */,
+				614749CB1AB4C0EC00CCECA7 /* LaunchScreen.xib in Resources */,
+				614749C81AB4C0EC00CCECA7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614749CE1AB4C0EC00CCECA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		614749B71AB4C0EC00CCECA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				614749C31AB4C0EC00CCECA7 /* ViewController.swift in Sources */,
+				614749C11AB4C0EC00CCECA7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614749CC1AB4C0EC00CCECA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				614749D71AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		614749D21AB4C0EC00CCECA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 614749BA1AB4C0EC00CCECA7 /* ZWVDropDownAlert */;
+			targetProxy = 614749D11AB4C0EC00CCECA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		614749C41AB4C0EC00CCECA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				614749C51AB4C0EC00CCECA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		614749C91AB4C0EC00CCECA7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				614749CA1AB4C0EC00CCECA7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		614749D81AB4C0EC00CCECA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		614749D91AB4C0EC00CCECA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		614749DB1AB4C0EC00CCECA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZWVDropDownAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		614749DC1AB4C0EC00CCECA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZWVDropDownAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		614749DE1AB4C0EC00CCECA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZWVDropDownAlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZWVDropDownAlert.app/ZWVDropDownAlert";
+			};
+			name = Debug;
+		};
+		614749DF1AB4C0EC00CCECA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZWVDropDownAlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZWVDropDownAlert.app/ZWVDropDownAlert";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		614749B61AB4C0EC00CCECA7 /* Build configuration list for PBXProject "ZWVDropDownAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614749D81AB4C0EC00CCECA7 /* Debug */,
+				614749D91AB4C0EC00CCECA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		614749DA1AB4C0EC00CCECA7 /* Build configuration list for PBXNativeTarget "ZWVDropDownAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614749DB1AB4C0EC00CCECA7 /* Debug */,
+				614749DC1AB4C0EC00CCECA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		614749DD1AB4C0EC00CCECA7 /* Build configuration list for PBXNativeTarget "ZWVDropDownAlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614749DE1AB4C0EC00CCECA7 /* Debug */,
+				614749DF1AB4C0EC00CCECA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 614749B31AB4C0EC00CCECA7 /* Project object */;
+}
