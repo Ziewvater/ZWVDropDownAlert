@@ -13,6 +13,7 @@
 		614749C81AB4C0EC00CCECA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614749C71AB4C0EC00CCECA7 /* Images.xcassets */; };
 		614749CB1AB4C0EC00CCECA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614749C91AB4C0EC00CCECA7 /* LaunchScreen.xib */; };
 		614749D71AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614749D61AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift */; };
+		614749E21AB4C11600CCECA7 /* DropDownAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614749E11AB4C11600CCECA7 /* DropDownAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		614749D01AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWVDropDownAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		614749D51AB4C0EC00CCECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		614749D61AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWVDropDownAlertTests.swift; sourceTree = "<group>"; };
+		614749E11AB4C11600CCECA7 /* DropDownAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropDownAlertView.swift; path = Classes/DropDownAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				614749C01AB4C0EC00CCECA7 /* AppDelegate.swift */,
 				614749C21AB4C0EC00CCECA7 /* ViewController.swift */,
+				614749E01AB4C0F800CCECA7 /* Classes */,
 				614749C41AB4C0EC00CCECA7 /* Main.storyboard */,
 				614749C71AB4C0EC00CCECA7 /* Images.xcassets */,
 				614749C91AB4C0EC00CCECA7 /* LaunchScreen.xib */,
@@ -110,6 +113,14 @@
 				614749D51AB4C0EC00CCECA7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		614749E01AB4C0F800CCECA7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				614749E11AB4C11600CCECA7 /* DropDownAlertView.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				614749C31AB4C0EC00CCECA7 /* ViewController.swift in Sources */,
+				614749E21AB4C11600CCECA7 /* DropDownAlertView.swift in Sources */,
 				614749C11AB4C0EC00CCECA7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
