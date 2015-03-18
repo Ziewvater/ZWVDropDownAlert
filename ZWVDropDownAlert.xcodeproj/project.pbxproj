@@ -14,6 +14,7 @@
 		614749CB1AB4C0EC00CCECA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614749C91AB4C0EC00CCECA7 /* LaunchScreen.xib */; };
 		614749D71AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614749D61AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift */; };
 		614749E21AB4C11600CCECA7 /* DropDownAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614749E11AB4C11600CCECA7 /* DropDownAlertView.swift */; };
+		61BA7AC11AB9E40F004F3EC0 /* DropDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA7AC01AB9E40F004F3EC0 /* DropDownController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		614749D51AB4C0EC00CCECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		614749D61AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWVDropDownAlertTests.swift; sourceTree = "<group>"; };
 		614749E11AB4C11600CCECA7 /* DropDownAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropDownAlertView.swift; path = Classes/DropDownAlertView.swift; sourceTree = "<group>"; };
+		61BA7AC01AB9E40F004F3EC0 /* DropDownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		614749E01AB4C0F800CCECA7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				61BA7AC01AB9E40F004F3EC0 /* DropDownController.swift */,
 				614749E11AB4C11600CCECA7 /* DropDownAlertView.swift */,
 			);
 			name = Classes;
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61BA7AC11AB9E40F004F3EC0 /* DropDownController.swift in Sources */,
 				614749C31AB4C0EC00CCECA7 /* ViewController.swift in Sources */,
 				614749E21AB4C11600CCECA7 /* DropDownAlertView.swift in Sources */,
 				614749C11AB4C0EC00CCECA7 /* AppDelegate.swift in Sources */,
@@ -417,6 +421,7 @@
 				614749DC1AB4C0EC00CCECA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		614749DD1AB4C0EC00CCECA7 /* Build configuration list for PBXNativeTarget "ZWVDropDownAlertTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				614749DF1AB4C0EC00CCECA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
