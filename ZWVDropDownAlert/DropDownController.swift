@@ -16,7 +16,9 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
     var dynamicAnimator: UIDynamicAnimator?
     var gravityBehavior: UIGravityBehavior?
     var collisionBehavior: UICollisionBehavior?
+    var attachmentBehavior: UIAttachmentBehavior?
     
+    var presentedAlert: UIView?
     var removing = false
     
     // MARK: Window lifecycle
@@ -32,7 +34,11 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
             start.origin = CGPoint(x: start.origin.x, y: start.origin.y - start.size.height)
             view.frame = start
             alertWindow.addSubview(view)
+            presentedAlert = view
             
+            view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
+            view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tap:"))
+                        
             collisionBehavior?.addItem(view)
             gravityBehavior?.addItem(view)
         }
@@ -83,14 +89,77 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
         window = nil
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-    
-    // MARK: - UICollisionBehaviorDelegate
-    
+}
+
+// MARK: - UICollisionBehaviorDelegate
+extension DropDownController: UICollisionBehaviorDelegate {
     func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying, atPoint p: CGPoint) {
         if removing {
             collisionBehavior?.removeItem(item)
             gravityBehavior?.removeItem(item)
             completeAlertRemoval()
         }
+    }
+}
+
+// MARK: Pan and tap gesture methods
+extension DropDownController {
+    
+    // MARK: Tap
+    
+    func tap(tapGesture: UITapGestureRecognizer) {
+        removeAlert()
+    }
+    
+    // MARK: Pan
+    
+    func pan(panGesture: UIPanGestureRecognizer) {
+        switch panGesture.state {
+        case .Possible: break
+        case .Began:
+            startPanInteraction(panGesture)
+        case .Changed:
+            moveAlertForPan(panGesture)
+        case .Ended:
+            finalizePan()
+        case .Cancelled:
+            finalizePan()
+        case .Failed: break
+        }
+    }
+    
+    func startPanInteraction(panGesture: UIPanGestureRecognizer) {
+        var location = panGesture.locationInView(window)
+        if let alert = presentedAlert {
+            // Attach alert to touch
+            var anchor = CGPoint(x: CGRectGetMidX(window!.bounds), y: location.y)
+            var attachment = UIAttachmentBehavior(item: alert, attachedToAnchor: anchor)
+            dynamicAnimator?.addBehavior(attachment)
+            
+            // Remove gravity so it's just the attachment and collision controlling the alert
+            if let gravity = gravityBehavior {
+                dynamicAnimator?.removeBehavior(gravity)
+            }
+            attachmentBehavior = attachment
+        }
+    }
+    
+    func moveAlertForPan(panGesture: UIPanGestureRecognizer) {
+        var location = panGesture.locationInView(window)
+        if let attachment = attachmentBehavior {
+            var anchor = CGPoint(x: CGRectGetMidX(window!.bounds), y: location.y)
+            attachment.anchorPoint = anchor
+        }
+    }
+    
+    func finalizePan() {
+        if let attachment = attachmentBehavior {
+            dynamicAnimator?.removeBehavior(attachment)
+        }
+        
+        if let gravity = gravityBehavior {
+            dynamicAnimator?.addBehavior(gravity)
+        }
+        removeAlert()
     }
 }

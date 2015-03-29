@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         if let alertWindow = alertController.window {
             alertController.removeAlert()
         } else {
-            alertController.showAlert()
+            alertController.showAlert(UIView())
         }
     }
     
