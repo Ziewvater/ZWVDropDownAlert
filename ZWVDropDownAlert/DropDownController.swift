@@ -57,7 +57,7 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
         alertToPresent = alertView
         
         var screen = UIScreen.mainScreen()
-        var windowFrame = CGRectMake(0, 0, CGRectGetWidth(screen.bounds), 128)
+        var windowFrame = CGRectMake(0, 0, CGRectGetWidth(screen.bounds), CGRectGetHeight(alertView.frame))
         var window = UIWindow(frame: windowFrame)
         
         window.windowLevel = UIWindowLevelStatusBar
