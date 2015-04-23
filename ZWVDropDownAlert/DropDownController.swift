@@ -23,6 +23,12 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
     var presentedAlert: DropDownAlertView?
     var removing = false
     
+    /// Time that the alert spends on screen before dismissing itself
+    var duration: NSTimeInterval = 3
+    
+    /// Timer responsible for triggering alert removal after a set period of time
+    weak var removalTimer: NSTimer?
+    
     // MARK: Window lifecycle
     
     func windowDidBecomeVisible(notification: NSNotification) {
@@ -47,6 +53,7 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
                 
                 collisionBehavior?.addItem(alert)
                 gravityBehavior?.addItem(alert)
+                startRemovalTimer()
             }
         }
     }
@@ -85,6 +92,8 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
     }
     
     func removeAlert() {
+        removalTimer?.invalidate()
+        removalTimer = nil
         if let gravity = gravityBehavior {
             gravity.gravityDirection = CGVector(dx: 0, dy: -2)
             removing = true
@@ -99,6 +108,12 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
         window?.hidden = true
         window = nil
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    // MARK: Removal timer
+    
+    func startRemovalTimer() {
+        removalTimer = NSTimer.scheduledTimerWithTimeInterval(duration, target: self, selector: "removeAlert", userInfo: nil, repeats: false)
     }
 }
 
@@ -131,6 +146,7 @@ extension DropDownController {
         switch panGesture.state {
         case .Possible: break
         case .Began:
+            removalTimer?.invalidate()
             startPanInteraction(panGesture)
         case .Changed:
             moveAlertForPan(panGesture)
