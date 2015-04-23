@@ -26,7 +26,9 @@ class ViewController: UIViewController {
         if let alertWindow = alertController.window {
             alertController.removeAlert()
         } else {
-            alertController.showAlert(UIView())
+            var alert = DropDownAlertView(frame: CGRect(origin: CGPointZero, size: CGSize(width: CGRectGetWidth(UIScreen.mainScreen().bounds), height: 128)))
+            alert.titleLabel.text = "Testo hello"
+            alertController.showAlert(alert)
         }
     }
     

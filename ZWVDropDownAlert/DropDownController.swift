@@ -17,8 +17,10 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
     var gravityBehavior: UIGravityBehavior?
     var collisionBehavior: UICollisionBehavior?
     var attachmentBehavior: UIAttachmentBehavior?
+    var bounceBehavior: UIDynamicItemBehavior?
     
-    var presentedAlert: UIView?
+    var alertToPresent: DropDownAlertView?
+    var presentedAlert: DropDownAlertView?
     var removing = false
     
     // MARK: Window lifecycle
@@ -27,26 +29,33 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
         if let alertWindow = window {
             removing = false
             
-            // Create alert view
-            var view = UIView(frame: alertWindow.bounds)
-            view.backgroundColor = UIColor.redColor()
-            var start = view.frame
-            start.origin = CGPoint(x: start.origin.x, y: start.origin.y - start.size.height)
-            view.frame = start
-            alertWindow.addSubview(view)
-            presentedAlert = view
-            
-            view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
-            view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tap:"))
-                        
-            collisionBehavior?.addItem(view)
-            gravityBehavior?.addItem(view)
+            if let alert = alertToPresent {
+                var aboveStatus = alert.frame
+                aboveStatus.origin = CGPoint(x: 0, y: -CGRectGetHeight(aboveStatus))
+                alert.frame = aboveStatus
+                
+                alertWindow.addSubview(alert)
+                presentedAlert = alert
+                
+                var bounce = UIDynamicItemBehavior(items: [alert])
+                bounce.elasticity = 0.4
+                dynamicAnimator?.addBehavior(bounce)
+                bounceBehavior = bounce
+                
+                alert.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
+                alert.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tap:"))
+                
+                collisionBehavior?.addItem(alert)
+                gravityBehavior?.addItem(alert)
+            }
         }
     }
     
     // MARK: - Public methods
     
-    func showAlert(alertView: UIView) {
+    func showAlert(alertView: DropDownAlertView) {
+        alertToPresent = alertView
+        
         var screen = UIScreen.mainScreen()
         var windowFrame = CGRectMake(0, 0, CGRectGetWidth(screen.bounds), 128)
         var window = UIWindow(frame: windowFrame)
@@ -85,6 +94,8 @@ class DropDownController: NSObject, UICollisionBehaviorDelegate {
     // MARK: - Private methods
     
     private func completeAlertRemoval() {
+        presentedAlert = nil
+        alertToPresent = nil
         window?.hidden = true
         window = nil
         NSNotificationCenter.defaultCenter().removeObserver(self)
@@ -97,6 +108,9 @@ extension DropDownController: UICollisionBehaviorDelegate {
         if removing {
             collisionBehavior?.removeItem(item)
             gravityBehavior?.removeItem(item)
+            if let bounce = bounceBehavior {
+                dynamicAnimator?.removeBehavior(bounce)
+            }
             completeAlertRemoval()
         }
     }
