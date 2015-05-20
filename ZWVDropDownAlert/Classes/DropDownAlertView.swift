@@ -14,13 +14,18 @@ class DropDownAlertView: UIView {
     var color: UIColor
     var textColor: UIColor
     
-    override init(frame: CGRect) {
+    var action: (Void -> Void)?
+    
+    // MARK: - Initialization
+    
+    init(frame: CGRect, action: (Void -> Void)? = nil) {
         var labelHeight: CGFloat = 30
         var labelFrame = CGRectMake(0, (frame.size.height-labelHeight)/2, frame.size.width, labelHeight)
         titleLabel = UILabel(frame: labelFrame)
         titleLabel.textAlignment = .Center
         color = UIColor.blueColor()
         textColor = UIColor.whiteColor()
+        self.action = action
         
         super.init(frame: frame)
         addSubview(titleLabel)
@@ -30,5 +35,11 @@ class DropDownAlertView: UIView {
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Stored Action
+    
+    func performStoredAction() {
+        action?()
     }
 }

@@ -137,6 +137,7 @@ extension DropDownController {
     // MARK: Tap
     
     func tap(tapGesture: UITapGestureRecognizer) {
+        presentedAlert?.performStoredAction()
         removeAlert()
     }
     
