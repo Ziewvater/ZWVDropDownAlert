@@ -39,7 +39,7 @@
 		614749D51AB4C0EC00CCECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		614749D61AB4C0EC00CCECA7 /* ZWVDropDownAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWVDropDownAlertTests.swift; sourceTree = "<group>"; };
 		614749E11AB4C11600CCECA7 /* DropDownAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropDownAlertView.swift; path = Classes/DropDownAlertView.swift; sourceTree = "<group>"; };
-		61BA7AC01AB9E40F004F3EC0 /* DropDownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownController.swift; sourceTree = "<group>"; };
+		61BA7AC01AB9E40F004F3EC0 /* DropDownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropDownController.swift; path = Classes/DropDownController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
